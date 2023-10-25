@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LPCONNECT - Connexion</title>
+    <title>LPCONNECT-CONNEXION</title>
     <style>
         body {
             display: flex;
@@ -9,44 +9,58 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-image: url('https://media.istockphoto.com/id/92105379/fr/photo/taille-basse-moderne-immeuble-de-bureaux.jpg?s=612x612&w=0&k=20&c=ZdZKnhpkVW0dGZCUpg2aNSBQepS98a6BkiRVCb8RdLc='); /* Image de fond */
-            background-size: cover;
-            background-position: center;
+            background-color: #f2f2f2;
         }
         .container {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+            background-color: #fff;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .discord-button {
             display: inline-block;
             background-color: #7289da;
             color: #fff;
-            padding: 5px 10px;
+            padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
+            cursor: pointer;
+        }
+        .discord-button:hover {
+            background-color: #677bc4;
         }
         .connect-button {
-            background-color: #157ee0; /* Couleur du bouton */
+            background-color: #157ee0;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold; /* Texte en gras */
-            
+            font-weight: bold;
+            font-style: italic;
         }
         .connect-button:hover {
-            background-color: #16c0d6; /* Couleur du bouton au survol */
+            background-color: #16c0d6;
+        }
+        .pronote-button {
+            background-color: #4caf50; /* Vert */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .pronote-button:hover {
+            background-color: #45a049; /* Vert plus foncé au survol */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1><span style="font-weight: bold; font-style: italic;">LPCONNECT</span></h1>
+        <h1 style="font-style: italic; font-weight: bold;">LPCONNECT</h1>
         <form method="post" action="votre_page_de_traitement.php">
             <div>
                 <label for="email">Adresse e-mail :</label>
@@ -61,16 +75,13 @@
             </div>
         </form>
         <div class="pt-4 separate text-secondary-600 text-sm">
-            
             Ou connectez-vous avec
-            
         </div>
-        <div>
-           <a href="https://discord.com/api/oauth2/authorize?client_id=1166322010675228733&scope=identify&response_type=code&redirect_uri=http://192.168.1.55/pronote/notredame/" class="discord-button">
-    Se connecter avec Discord
-</a>
-
-            </a>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=1166322010675228733&scope=identify&response_type=code&redirect_uri=http://192.168.1.55/pronote/notredame/pageetablissement.html" class="discord-button">
+            Se connecter avec Discord
+        </a>
+        <div class="pt-4">
+            <a href="http://192.168.1.55/pronote/notredame/" class="pronote-button">Se connecter à Pronote</a>
         </div>
     </div>
 </body>
